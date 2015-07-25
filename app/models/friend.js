@@ -8,7 +8,7 @@ export default DS.Model.extend({
   email: attr('string'),
   twitter: attr('string'),
   totalArticles: attr('number'),
-  articles: DS.hasMany('article')
+  articles: DS.hasMany('article'),
   fullName: computed('firstName', 'lastName', function() {
     return this.get('firstName') + " " + this.get('lastName');
   })
