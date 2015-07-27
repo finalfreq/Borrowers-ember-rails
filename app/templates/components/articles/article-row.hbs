@@ -2,7 +2,7 @@
 <td>{{article.notes}}</td>
 <td>{{article.createdAt}}</td>
 <td>
-  {{#x-select value=article.state}}
+  {{#x-select value=article.state action='saveArticle'}}
     {{#each articleStates as |state|}}
       {{#x-option value=state}}{{state}}{{/x-option}}
     {{/each}}
@@ -13,7 +13,5 @@
     <p>
       Saving ...
     </p>
-  {{else if article.hasDirtyAttributes}}
-    <button {{action 'saveArticle' article}}>Save</button>
   {{/if}}
 </td>

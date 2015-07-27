@@ -6,6 +6,17 @@ export default Ember.Route.extend({
       friend: this.modelFor('friends/show')
     });
   },
+  
+  controllerReset(controller, isExiting) {
+    if (isExiting) {
+      var model = controller.get("model")
+
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
+    }
+  },
+
   actions: {
     save() {
       var model = this.modelFor('articles/new');
