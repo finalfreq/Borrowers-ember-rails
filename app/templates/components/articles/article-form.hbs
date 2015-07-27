@@ -1,0 +1,7 @@
+<h2>{{errorMessage}}</h2>
+<fieldset>
+  {{input value=article.description placeholder='Description'}}<br>
+  {{input value=article.notes placeholder='Notes'}}<br>
+  <button {{action "saveArticle"}} class="primary">Save</button>
+  <button {{action "cancelArticle"}}>Cancel</button>
+</fieldset>

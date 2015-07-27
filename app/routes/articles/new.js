@@ -6,9 +6,10 @@ export default Ember.Route.extend({
       friend: this.modelFor('friends/show')
     });
   },
-  
-  controllerReset(controller, isExiting) {
+
+  resetController(controller, isExiting) {
     if (isExiting) {
+
       var model = controller.get("model")
 
       if (model.get('isNew')) {
@@ -20,7 +21,6 @@ export default Ember.Route.extend({
   actions: {
     save() {
       var model = this.modelFor('articles/new');
-
       model.save().then(() => {
         this.transitionTo('articles');
       });
