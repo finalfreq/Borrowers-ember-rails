@@ -1,7 +1,7 @@
 import FriendsBaseController from './base';
 export default FriendsBaseController.extend({
   actions: {
-    cancel: function() {
+    cancel(){
       this.transitionToRoute('friends.index');
       return false;
     }

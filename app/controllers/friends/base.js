@@ -1,24 +1,21 @@
 import Ember from 'ember';
   var computed = Ember.computed;
 export default Ember.Controller.extend({
-  isValid: computed(
-    'model.email',
-    'model.firstName',
-    'model.lastName',
-    'model.twitter',
-    function() {
-      return !Ember.isEmpty(this.get('model.email')) &&
-        !Ember.isEmpty(this.get('model.firstName')) &&
-        !Ember.isEmpty(this.get('model.lastName')) &&
-        !Ember.isEmpty(this.get('model.twitter'));
-    }
+  hasEmail: computed.notEmpty('model.email'),
+  hasFirstName: computed.notEmpty('model.firstName'),
+  hasLastName: computed.notEmpty('model.lastName'),
+  hasTwitter: computed.notEmpty('model.twitter'),
+  isValid: computed.and(
+    'hasEmail',
+    'hasFirstName',
+    'hasLastName',
+    'hasTwitter'
   ),
   actions: {
-    save: function() {
+    save() {
       if (this.get('isValid')) {
-        var _this = this;
-        this.get('model').save().then(function(friend) {
-          _this.transitionToRoute('friends.show', friend);
+        this.get('model').save().then((friend) => {
+          this.transitionToRoute('friends.show', friend);
         });
       } else {
         this.set('errorMessage', 'you have to fill all the fields');
@@ -26,7 +23,7 @@ export default Ember.Controller.extend({
 
       return false;
     },
-    cancel: function() {
+    cancel() {
       return true
     }
   }
