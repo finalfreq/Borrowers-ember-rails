@@ -1,9 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.modelFor('friends/show').get('articles');
+  queryParams: {
+    showReturned: {
+      refreshModel: true
+    }
   },
+  model() {
+    let articles = this.modelFor('friends/show').get('articles');
+    debugger;
+    if (articles.get('isFulfilled')) {
+      articles.reload();
+    }
+
+    return articles
+  },
+
 
   actions: {
     save(model) {

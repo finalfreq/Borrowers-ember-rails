@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'form',
   article: null,
-
+  errorMessage: null,
   actions: {
 
     saveArticle() {

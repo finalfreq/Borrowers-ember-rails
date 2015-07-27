@@ -2,12 +2,9 @@
 <table class="primary">
   <thead>
     <tr>
-      <th>
-        Name
-      </th>
-      <th>
-
-      </th>
+      <th {{action "setSortBy" "firstName"}}> Name </th>
+      <th {{action "setSortBy" "totalArticles"}}> Articles </th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +12,9 @@
       <tr>
         <td>
           {{link-to friend.fullName "articles" friend}}
+        </td>
+        <td>
+          {{friend.totalArticles}}
         </td>
         <td>
           <a href="#"{{action 'delete' friend}}>Delete</a>

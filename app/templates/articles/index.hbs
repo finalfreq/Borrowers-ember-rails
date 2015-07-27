@@ -2,13 +2,13 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>Notes</th>
       <th>Borrowed since</th>
-      <th></th>
-      <th></th>
+      <th {{action "setShowAll"}}>Show All</th>
     </tr>
   </thead>
   <tbody>
-    {{#each model as |article|}}
+    {{#each filteredResults as |article|}}
       {{articles/article-row
         article=article
         save="save"
