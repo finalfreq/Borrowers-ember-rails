@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
       this.set('sortBy', fieldName);
       this.toggleProperty('sortAscending');
 
-      console.log('sorting by', fieldName)
+      console.log('sorting by', fieldName);
       console.log('sorting Asc?', this.get('sortAscending'));
 
       return false;

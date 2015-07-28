@@ -8,7 +8,6 @@ export default Ember.Route.extend({
   },
   model() {
     let articles = this.modelFor('friends/show').get('articles');
-    debugger;
     if (articles.get('isFulfilled')) {
       articles.reload();
     }

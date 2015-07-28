@@ -5,7 +5,6 @@ export default Ember.Component.extend({
     this.addObserver('article.state', this, this.stateChanged);
   }.on('init'),
     stateChanged() {
-    var article = this.get('article');
     console.log('omg expensive operation because aticle state chagned');
   },
   tagName: 'tr',

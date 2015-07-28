@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
       return false;
     },
     cancel() {
-      return true
+      return true;
     }
   }
 });

@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
 
   actions: {
     setShowAll() {
-      this.toggleProperty('showReturned')
+      this.toggleProperty('showReturned');
     }
   }
 });

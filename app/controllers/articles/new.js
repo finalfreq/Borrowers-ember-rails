@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
   actions: {
     save() {
       if (this.get('isValid')) {
-        return true
+        return true;
       } else {
         this.set('errorMessage', "You didn't fill out all forms");
       }
