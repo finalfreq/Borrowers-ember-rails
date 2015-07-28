@@ -38,6 +38,9 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "emberx-select": "1.1.4",
-    "moment": "^2.10.5"
+    "express": "^4.13.1",
+    "glob": "^4.5.3",
+    "moment": "^2.10.5",
+    "morgan": "^1.6.1"
   }
 }
