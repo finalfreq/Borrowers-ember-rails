@@ -1,11 +1,11 @@
 <form {{action 'save' on="submit"}}>
   <h2>{{errorMessage}}</h2>
-  <fieldset>
-    {{input value=model.firstName placeholder="First Name"}}
-    {{input value=model.lastName placeholder="Last Name"}}
-    {{input value=model.email placeholder="Email"}}
-    {{input value=model.twitter placeholder="Twitter"}}
-  </fieldset>
+  <div class="form-group">
+    {{input value=model.firstName placeholder="First Name" class="form-control" }}
+    {{input value=model.lastName placeholder="Last Name" class="form-control" }}
+    {{input value=model.email placeholder="Email" class="form-control" }}
+    {{input value=model.twitter placeholder="Twitter" class="form-control" }}
+  </div>
   <input type="submit" value="Save" class="primary"/>
   <button {{action "cancel"}} >Cancel</button>
 </form>

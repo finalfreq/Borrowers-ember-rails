@@ -12,6 +12,8 @@
     "jquery": "^1.11.1",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
-    "picnic": "https://github.com/picnicss/picnic.git"
+    "picnic": "https://github.com/picnicss/picnic.git",
+    "bootstrap": "^3.3.4",
+    "bootswatch": "^3.3.4"
   }
 }

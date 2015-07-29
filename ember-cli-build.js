@@ -3,8 +3,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'ember-cli-bootswatch': 'flatly'
   });
+  
 app.import('vendor/fontello/fontello.css');
 app.import('vendor/fontello/font/fontello.ttf', {
   destDir: 'font'
